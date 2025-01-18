@@ -4,10 +4,6 @@ on:
   push:
     branches:
       - main  # Exécutez le pipeline lorsqu'il y a un push sur la branche principale.
-  pull_request:
-    branches:
-      - main  # Exécutez également lors d'une pull request vers la branche principale.
-
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
