@@ -22,11 +22,11 @@ jobs:
 
       # 3. Construire et taguer l'image Docker
       - name: Build Docker image
-        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/fastapi-app:latest .
+        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/api:latest .
 
       # 4. Pousser l'image vers Docker Hub
       - name: Push Docker image to Docker Hub
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/fastapi-app:latest
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/api:latest
 
       # 5. Déployer sur un serveur distant via SSH
       - name: Deploy to server
